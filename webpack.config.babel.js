@@ -1,4 +1,5 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import path from 'path'
 
 module.exports = {
   context: `${__dirname}/src`,
@@ -24,5 +25,11 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000,
+    devtool: 'cheap-module-eval-source-map'
   }
 }

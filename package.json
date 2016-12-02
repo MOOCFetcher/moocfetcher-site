@@ -22,7 +22,6 @@
   },
   "scripts": {
     "lint": "standard --fix",
-    "build": "webpack",
-    "serve": "webpack-dev-server --content-base dist"
+    "serve": "webpack-dev-server"
   }
 }
