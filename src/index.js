@@ -1,10 +1,7 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import Home from './components/Home'
+import {render} from 'react-dom'
+import Site from './components/Site'
 
-const element = <Home name='Deepak' />
+const site = <Site />
 
-ReactDOM.render(
-  element,
-  document.getElementById('container')
-)
+render(site, document.getElementById('root'))
