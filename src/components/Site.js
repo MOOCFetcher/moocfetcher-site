@@ -8,8 +8,8 @@ import Contact from './Contact'
 import Footer from './Footer'
 
 let fadeIn = css.keyframes({
-  '0%': { opacity: 0},
-  '100%': { opacity: 1}
+  '0%': {opacity: 0},
+  '100%': {opacity: 1}
 })
 
 let animation = css({
@@ -18,13 +18,13 @@ let animation = css({
 
 export default function Site () {
   return (
-    <div className="container" {...animation}>
-      <div className="row"><Nav/></div>
-      <div className="row"><Header/></div>
-      <div className="row"><HowItWorks/></div>
-      <div className="row"><FAQ/></div>
-      <div className="row"><Contact/></div>
-      <div className="row"><Footer/></div>
-  </div>
+    <div className='container' {...animation}>
+      <div className='row'><Nav /></div>
+      <div className='row'><Header /></div>
+      <div className='row'><HowItWorks /></div>
+      <div className='row'><FAQ /></div>
+      <div className='row'><Contact /></div>
+      <div className='row'><Footer /></div>
+    </div>
   )
 }

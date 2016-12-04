@@ -17,7 +17,7 @@ export default function Header () {
   return (
     <header {...header}>
       <h1>Experience MOOCs offline.</h1>
-      <h5>MOOCFetcher is a volunteer-run, non-commercial and <a href="https://github.com/moocfetcher">open source</a> effort to bring MOOCs (Massive Online Open Courses) to communities and places without decent internet connections.</h5>
+      <h5>MOOCFetcher is a volunteer-run, non-commercial and <a href='https://github.com/moocfetcher'>open source</a> effort to bring MOOCs (Massive Online Open Courses) to communities and places without decent internet connections.</h5>
     </header>
   )
 }
