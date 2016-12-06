@@ -17,7 +17,8 @@ let animation = css({
 
 let topPadding = css({
   '& .section > div': {
-    paddingTop: '5rem'
+    paddingTop: '5rem',
+    minHeight: '100vh'
   }
 })
 
