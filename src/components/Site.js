@@ -5,7 +5,6 @@ import Header from './Header'
 import HowItWorks from './HowItWorks'
 import FAQ from './FAQ'
 import Contact from './Contact'
-import Footer from './Footer'
 
 let fadeIn = css.keyframes({
   '0%': {opacity: 0},
@@ -16,15 +15,20 @@ let animation = css({
   animation: `${fadeIn} 2.0s ease forwards`
 })
 
+let topPadding = css({
+  '& .section > div': {
+    paddingTop: '5rem'
+  }
+})
+
 export default function Site () {
   return (
-    <div className='container' {...animation}>
+    <div className='container' {...animation} {...topPadding}>
       <div className='row'><Nav /></div>
       <div className='row'><Header /></div>
-      <div className='row'><HowItWorks /></div>
-      <div className='row'><FAQ /></div>
-      <div className='row'><Contact /></div>
-      <div className='row'><Footer /></div>
+      <div className='row section'><HowItWorks /></div>
+      <div className='row section'><FAQ /></div>
+      <div className='row section'><Contact /></div>
     </div>
   )
 }
