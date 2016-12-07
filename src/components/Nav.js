@@ -1,6 +1,6 @@
 import React from 'react'
 import { css } from 'glamor'
-import { Link } from 'react-scroll'
+import { Link, Events } from 'react-scroll'
 import matchMedia from 'matchmedia'
 
 let nav = css({
@@ -35,7 +35,6 @@ let navMobile = css({
   width: '100%',
   height: '5rem',
   '& ul': {
-    display: 'none',
     listStyle: 'none',
     position: 'fixed',
     top: '5rem',
@@ -56,7 +55,6 @@ let navMobile = css({
 })
 
 let navbarToggler = css({
-  background: 'url(/img/menu.svg) no-repeat center center',
   height: '4rem',
   width: '4rem',
   padding: '0',
@@ -69,6 +67,25 @@ let navbarToggler = css({
 })
 
 export default class Nav extends React.Component {
+
+  constructor () {
+    super()
+    this.state = {showDropdown: false}
+  }
+
+  componentDidMount () {
+    Events.scrollEvent.register('begin', () => {
+      this.toggleDropdown()
+    })
+  }
+
+  componentWillUnmount () {
+    Events.scrollEvent.remove('begin')
+  }
+
+  toggleDropdown = () => {
+    this.setState({showDropdown: !this.state.showDropdown})
+  }
 
   render () {
     if (matchMedia('(min-width: 40rem)').matches) {
@@ -83,14 +100,17 @@ export default class Nav extends React.Component {
         </nav>
       )
     } else {
+      let visibility = css({
+        visibility: this.state.showDropdown ? 'visible' : 'hidden'
+      })
       return (
         <nav {...navMobile}>
-          <div {...navbarToggler}>
+          <div {...navbarToggler} onClick={this.toggleDropdown}>
             <svg version='1.1' viewBox='0 0 32 32'>
               <path d='M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z' />
             </svg>
           </div>
-          <ul className='dropdown'>
+          <ul className='dropdown' {...visibility}>
             <li><Link to='top' activeClass='active' spy smooth duration={500}>Home</Link></li>
             <li><Link to='howitworks' activeClass='active' spy smooth duration={500}>How It Works</Link></li>
             <li><Link to='faq' activeClass='active' spy smooth duration={500}>FAQs</Link></li>
