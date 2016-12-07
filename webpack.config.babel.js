@@ -1,4 +1,5 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
 import path from 'path'
 
 module.exports = {
@@ -9,14 +10,16 @@ module.exports = {
     path: `${__dirname}/dist`,
     filename: 'index.js'
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: 'index.ejs',
-    minify: {
-      html5: true,
-      removeComments: true,
-      collapseWhitespace: true
-    }
-  })],
+  plugins: [
+    new CopyWebpackPlugin([{from: 'static/'}]),
+    new HtmlWebpackPlugin({
+      template: 'index.ejs',
+      minify: {
+        html5: true,
+        removeComments: true,
+        collapseWhitespace: true
+      }
+    })],
   module: {
     loaders: [
       {
