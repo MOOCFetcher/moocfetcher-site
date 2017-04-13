@@ -67,7 +67,6 @@ let navbarToggler = css({
 })
 
 export default class Nav extends React.Component {
-
   constructor () {
     super()
     this.state = {showDropdown: false}
