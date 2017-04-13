@@ -10,18 +10,18 @@
     "matchmedia": "^0.1.2",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "react-scroll": "^1.4.4"
+    "react-scroll": "^1.4.8"
   },
   "devDependencies": {
-    "babel-core": "^6.18.2",
-    "babel-eslint": "^7.1.1",
-    "babel-loader": "^6.2.8",
-    "babel-plugin-transform-class-properties": "^6.19.0",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-react": "^6.16.0",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.2",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "copy-webpack-plugin": "^4.0.1",
-    "html-webpack-plugin": "^2.24.1",
-    "standard": "*",
+    "html-webpack-plugin": "^2.28.0",
+    "standard": "^10.0.1",
     "webpack": "2.3.3",
     "webpack-dev-server": "^2.4.2"
   },
