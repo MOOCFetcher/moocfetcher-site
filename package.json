@@ -22,8 +22,8 @@
     "copy-webpack-plugin": "^4.0.1",
     "html-webpack-plugin": "^2.24.1",
     "standard": "*",
-    "webpack": "beta",
-    "webpack-dev-server": "beta"
+    "webpack": "2.3.3",
+    "webpack-dev-server": "^2.4.2"
   },
   "scripts": {
     "lint": "standard --fix",
