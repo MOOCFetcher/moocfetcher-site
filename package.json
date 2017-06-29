@@ -1,35 +1,16 @@
 {
-  "name": "moocfetcher-site",
-  "version": "0.0.1",
-  "description": "moocfetcher.com site",
-  "repository": "https://github.com/MOOCFetcher/moocfetcher-site.git",
-  "author": "Deepak Jois <deepak.jois@gmail.com>",
-  "license": "MIT",
+  "name": "moocfetcher-site-v2",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "glamor": "^2.20.9",
-    "matchmedia": "^0.1.2",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "react-scroll": "^1.4.8"
-  },
-  "devDependencies": {
-    "babel-core": "^6.24.1",
-    "babel-eslint": "^7.2.2",
-    "babel-loader": "^6.4.1",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "copy-webpack-plugin": "^4.0.1",
-    "html-webpack-plugin": "^2.28.0",
-    "standard": "^10.0.1",
-    "webpack": "2.3.3",
-    "webpack-dev-server": "^2.4.2"
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.8"
   },
   "scripts": {
-    "lint": "standard --fix",
-    "serve": "webpack-dev-server --devtool cheap-module-eval-source-map"
-  },
-  "standard": {
-    "parser": "babel-eslint"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }

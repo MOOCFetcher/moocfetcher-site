@@ -1,7 +1,8 @@
-import React from 'react'
-import {render} from 'react-dom'
-import Site from './components/Site'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
 
-const site = <Site />
-
-render(site, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'));
+registerServiceWorker();
