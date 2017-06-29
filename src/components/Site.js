@@ -7,8 +7,8 @@ import FAQ from './FAQ'
 import Contact from './Contact'
 
 let fadeIn = css.keyframes({
-  '0%': {opacity: 0},
-  '100%': {opacity: 1}
+  '0%': { opacity: 0 },
+  '100%': { opacity: 1 }
 })
 
 let animation = css({
@@ -22,14 +22,24 @@ let topPadding = css({
   }
 })
 
-export default function Site () {
+export default function Site() {
   return (
-    <div className='container' {...animation} {...topPadding}>
-      <div className='row'><Nav /></div>
-      <div className='row'><Header /></div>
-      <div className='row section'><HowItWorks /></div>
-      <div className='row section'><FAQ /></div>
-      <div className='row section'><Contact /></div>
+    <div className="container" {...animation} {...topPadding}>
+      <div className="row">
+        <Nav />
+      </div>
+      <div className="row">
+        <Header />
+      </div>
+      <div className="row section">
+        <HowItWorks />
+      </div>
+      <div className="row section">
+        <FAQ />
+      </div>
+      <div className="row section">
+        <Contact />
+      </div>
     </div>
   )
 }

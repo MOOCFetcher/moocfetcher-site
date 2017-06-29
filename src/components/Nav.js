@@ -67,34 +67,56 @@ let navbarToggler = css({
 })
 
 export default class Nav extends React.Component {
-  constructor () {
+  constructor() {
     super()
-    this.state = {showDropdown: false}
+    this.state = { showDropdown: false }
   }
 
-  componentDidMount () {
+  componentDidMount() {
     Events.scrollEvent.register('begin', () => {
       this.toggleDropdown()
     })
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     Events.scrollEvent.remove('begin')
   }
 
   toggleDropdown = () => {
-    this.setState({showDropdown: !this.state.showDropdown})
+    this.setState({ showDropdown: !this.state.showDropdown })
   }
 
-  render () {
+  render() {
     if (matchMedia('(min-width: 40rem)').matches) {
       return (
         <nav {...nav}>
           <ul>
-            <li><Link to='top' activeClass='active' spy smooth duration={500}>Home</Link></li>
-            <li><Link to='howitworks' activeClass='active' spy smooth duration={500}>How It Works</Link></li>
-            <li><Link to='faq' activeClass='active' spy smooth duration={500}>FAQs</Link></li>
-            <li><Link to='contact' activeClass='active' spy smooth duration={500}>Contact Us</Link></li>
+            <li>
+              <Link to="top" activeClass="active" spy smooth duration={500}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="howitworks"
+                activeClass="active"
+                spy
+                smooth
+                duration={500}
+              >
+                How It Works
+              </Link>
+            </li>
+            <li>
+              <Link to="faq" activeClass="active" spy smooth duration={500}>
+                FAQs
+              </Link>
+            </li>
+            <li>
+              <Link to="contact" activeClass="active" spy smooth duration={500}>
+                Contact Us
+              </Link>
+            </li>
           </ul>
         </nav>
       )
@@ -105,15 +127,37 @@ export default class Nav extends React.Component {
       return (
         <nav {...navMobile}>
           <div {...navbarToggler} onClick={this.toggleDropdown}>
-            <svg version='1.1' viewBox='0 0 32 32'>
-              <path d='M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z' />
+            <svg version="1.1" viewBox="0 0 32 32">
+              <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
             </svg>
           </div>
-          <ul className='dropdown' {...visibility}>
-            <li><Link to='top' activeClass='active' spy smooth duration={500}>Home</Link></li>
-            <li><Link to='howitworks' activeClass='active' spy smooth duration={500}>How It Works</Link></li>
-            <li><Link to='faq' activeClass='active' spy smooth duration={500}>FAQs</Link></li>
-            <li><Link to='contact' activeClass='active' spy smooth duration={500}>Contact Us</Link></li>
+          <ul className="dropdown" {...visibility}>
+            <li>
+              <Link to="top" activeClass="active" spy smooth duration={500}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="howitworks"
+                activeClass="active"
+                spy
+                smooth
+                duration={500}
+              >
+                How It Works
+              </Link>
+            </li>
+            <li>
+              <Link to="faq" activeClass="active" spy smooth duration={500}>
+                FAQs
+              </Link>
+            </li>
+            <li>
+              <Link to="contact" activeClass="active" spy smooth duration={500}>
+                Contact Us
+              </Link>
+            </li>
           </ul>
         </nav>
       )
