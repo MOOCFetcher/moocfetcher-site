@@ -18,7 +18,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "precommit": "lint-staged",
-    "lint": "prettier --single-quote --no-semi --write 'src/**/*.js'"
+    "fmt": "prettier --single-quote --no-semi --write 'src/**/*.js'"
   },
   "lint-staged": {
     "src/**/*.js": [
