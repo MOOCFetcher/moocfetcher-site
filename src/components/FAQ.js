@@ -1,10 +1,16 @@
 import React from 'react'
+import { css } from 'glamor'
 
+let dl = css({
+  '& dt': {
+    fontWeight: 'bold'
+  }
+})
 export default function FAQ() {
   return (
     <div id="faq">
       <h3>Frequently Asked Questions (FAQs)</h3>
-      <dl>
+      <dl {...dl}>
         <dt>
           <p>What MOOC providers do you support?</p>
         </dt>
